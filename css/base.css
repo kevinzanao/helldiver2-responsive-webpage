@@ -13,7 +13,7 @@
 }
 
 body {
-    height: 110vh; width: auto;
+    height: 110vh;
     font-family: 'Arial', sans-serif;
     display: grid;
     grid-template-areas: 
@@ -286,6 +286,11 @@ footer {
 }
 
 @media (max-width: 600px) {
+
+    body {
+        height: 100%;
+    }
+
     .header__left .header__navigation {
         display: none;
     }
@@ -296,5 +301,9 @@ footer {
 
     .main__informations {
         padding-top: 3rem;
+    }
+
+    .main__image img {
+        min-width: 50%;
     }
 }
