@@ -1,0 +1,300 @@
+:root {
+    --main-color: #252422;
+    --second-color: #403d39;
+    --contrast-color: #eb5e28;
+    --first-detail-color: #ccc5b9;
+    --second-detail-color: #fffcf2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 110vh;
+    font-family: 'Arial', sans-serif;
+    display: grid;
+    grid-template-areas: 
+    "header header"
+    "main aside"
+    "footer footer";
+    grid-template-columns: 1fr;
+    grid-template-rows: .1fr auto .1fr;
+}
+
+header {
+    grid-area: header;
+    padding: 1rem 2rem;
+    background-color: var(--main-color);
+    color: var(--second-detail-color);
+}
+
+.header__container {
+    height: 100%; width: 100%; 
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+}
+
+.header__left {
+    display: grid;
+    grid-template-columns: auto 1fr 3fr;
+    align-items: center;
+    gap: 2rem;
+}
+
+.header__left .header__more {
+    min-width: 31px;
+    display: none;
+    cursor: pointer;
+}
+
+.header__left .header__more span{
+    display: block;
+    padding: .1em ; 
+    margin: .2em;
+    cursor: pointer;
+    background-color: var(--second-detail-color);
+}
+
+.header__left .header__more:hover span {
+    background-color: var(--contrast-color);
+}
+
+.header__left img {
+   max-width: 88px;
+   min-width: 81px;
+}
+
+.header__left .header__navigation {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+}
+
+.header__left .header__navigation li {
+    font-weight: 400;
+}
+
+.header__left .header__navigation li:nth-child(1) {
+    color: var(--contrast-color)
+}
+
+.header__left .header__navigation li a:hover {
+    color: var(--contrast-color);
+    cursor: pointer;
+}
+
+.header__right .header__actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 2rem;
+}
+
+.header__right .header__actions button {
+    padding: .4rem 1rem;
+    border-radius: 20px;
+    background-color: var(--contrast-color);
+    white-space: nowrap;
+}
+
+.header__right .header__actions button:hover {
+    cursor: pointer;
+    color: var(--second-color);
+    background-color: var(--first-detail-color);
+}
+
+.header__right .header__actions form {
+    display: flex;
+    padding: .5rem;
+    border-radius: 1.7rem;
+    gap: 1rem;
+    background-color: var(--second-detail-color);
+}
+
+.header__right .header__actions label {
+    background-image: url('../assets/img/search.png');
+    padding: .3rem .5rem;
+    background-repeat: no-repeat;
+    margin-left: .7rem;
+}
+
+.header__right .header__actions input {
+    background-color: transparent;
+}
+
+main {
+    height: 100%;
+    grid-area: main;
+    background-color: var(--second-color);
+    display: flex;
+    background-image: url('../assets/img/helldiver-gameplay-prewiew.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+main div:not(:first-child) {
+    z-index: 1;
+}
+
+.panel {
+    position: absolute;
+    height: 100%; width: 100%;
+    background-color: rgba( 0, 0, 0, .5);
+}
+
+.main__informations {
+    height: 100%; width: 50%;
+    display: grid;
+    grid-template-rows: 1.5fr repeat(4, auto) 2fr;
+    justify-items: center;
+    color: var(--first-detail-color); 
+}
+
+.main__informations p:nth-child(1) {
+    align-self: flex-end;
+    font-weight: 600;
+    font-size: 3rem;
+}
+
+.main__informations p:nth-child(2) {
+    font-size: 1.2rem;
+    margin: 1rem 0 .5rem 0;
+}
+
+.main__informations h2:nth-child(3) {
+    font-size: 1.5rem;
+}
+
+.main__informations p:nth-child(4) {
+    margin: 3rem 0 1rem 0;
+    font-size: 1.1rem;
+    text-indent: 2em;
+    text-align: justify;
+    width: 90%;
+}
+
+.main__informations p:nth-child(5) {
+    margin: 0 0 1rem 0; 
+    font-size: 1.1rem;
+    text-indent: 2em;
+    text-align: justify;
+    width: 90%;
+}
+
+.main__informations .main__play-now {
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main__informations button {
+    padding: 1rem;
+    border-radius: 2px;
+    background-color: var(--contrast-color);
+    font-weight: 550;
+
+}
+
+.main__informations button:hover {
+    background-color: var(--second-color);
+    color: var(--second-detail-color);
+    cursor: pointer;
+}
+
+.main__image {
+    flex: 1;
+    overflow: hidden;
+    align-content: flex-end;
+    padding-top: 3rem;
+}
+
+.main__image img {
+    min-width: 77%;
+    display: block;
+    margin: 0 auto;
+}
+
+footer {
+    z-index: 1;
+    grid-area: footer;
+    background-color: var(--first-detail-color);
+    height: 13vh;
+    align-content: center;
+}
+
+.footer__content {
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+    color: #545454;
+}
+
+.footer__content p {
+    margin-bottom: .5rem;
+}
+
+.footer__content a {
+    padding: 0 .5rem;
+    cursor: auto;
+}
+
+.footer__content a img {
+    cursor: pointer;
+    border-bottom: 2px solid var(--first-detail-color);
+}
+
+.footer__content a img:hover {
+    border-bottom: 2px solid var(--contrast-color);
+}
+
+
+@media (max-width: 1024px) {
+
+    
+
+    main {
+        flex-direction: column;
+        position: relative;
+    }
+
+    .panel {
+        height: 100%;
+    }
+
+    .main__informations {
+        height: 50%; width: 100%;
+    }
+
+    .main__images {
+        height: 50%;
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 834px) {
+
+    .header__right .header__actions form {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .header__left .header__navigation {
+        display: none;
+    }
+
+    .header__left .header__more {
+        display: block;
+    }
+
+    .main__informations {
+        padding-top: 3rem;
+    }
+}
