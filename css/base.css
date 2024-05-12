@@ -13,7 +13,7 @@
 }
 
 body {
-    height: 110vh;
+    height: 110vh; width: auto;
     font-family: 'Arial', sans-serif;
     display: grid;
     grid-template-areas: 
