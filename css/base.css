@@ -268,11 +268,11 @@ footer {
     }
 
     .main__informations {
-        height: 50%; width: 100%;
+        height: 70%; width: 100%;
     }
 
-    .main__images {
-        height: 100%;
+    .main__image {
+        height: 50%;
         width: 100%;
     }
 
