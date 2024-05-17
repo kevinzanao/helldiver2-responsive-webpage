@@ -308,6 +308,7 @@ footer {
 
     .main__informations {
         padding-top: 3rem;
+        height: auto;
     }
 
     .main__informations h2 {
@@ -316,10 +317,9 @@ footer {
 
     .main__informations p {
         line-height: 1rem;
-        height: 70%;
     }
 
-    .main__image img {
-        max-width: 30%;
+    .main__image {
+        height: auto;
     }
 }
